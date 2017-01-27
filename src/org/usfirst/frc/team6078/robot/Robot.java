@@ -15,8 +15,7 @@ import org.usfirst.frc.team6078.robot.subsystems.ExampleSubsystem;
 
 import org.usfirst.frc.team6078.robot.drivetrain.*;
 
-
-//This is a test
+import java.util.concurrent.TimeUnit; 
 
 /**
  * The VM is configured to automatically run this class, Eand to call the
@@ -31,7 +30,10 @@ public class Robot extends IterativeRobot {
 	public static final ExampleSubsystem exampleSubsystem = new ExampleSubsystem();
 	public static OI oi;
 
+	//Presume this is the timer?
 	Command autonomousCommand;
+	
+	//No idea what this does 
 	SendableChooser<Command> chooser = new SendableChooser<>();
 
 	/**
@@ -122,5 +124,13 @@ public class Robot extends IterativeRobot {
 	@Override
 	public void testPeriodic() {
 		LiveWindow.run();
+		
+		//Should wiggle ports 0, 1, 2, 3
+		Test_Functions.wiggleMotors();
+		
+		
+		
+		
+		
 	}
 }
