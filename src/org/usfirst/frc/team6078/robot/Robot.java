@@ -27,6 +27,7 @@ import org.usfirst.frc.team6078.robot.drivetrain.*;
  */
 public class Robot extends IterativeRobot {
 
+	//Don't think we need this but I'm too afraid to remove it so I'm just gonna leave it here -Josh 
 	public static final ExampleSubsystem exampleSubsystem = new ExampleSubsystem();
 	public static OI oi;
 
@@ -112,7 +113,7 @@ public class Robot extends IterativeRobot {
 	public void teleopPeriodic() {
 		Scheduler.getInstance().run();
 		
-		Drivetrain.DrivetrainV1.drive.arcadeDrive(OI.operatorJoystick);
+		Drivetrain.DrivetrainV1.drive.arcadeDrive(OI.operatorJoystick);	
 	}
 
 	/**
