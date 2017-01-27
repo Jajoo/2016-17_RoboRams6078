@@ -115,7 +115,7 @@ public class Robot extends IterativeRobot {
 	public void teleopPeriodic() {
 		Scheduler.getInstance().run();
 		
-		Drivetrain.DrivetrainV1.drive.arcadeDrive(OI.operatorJoystick);	
+		Drivetrain.drivetrainV1.drive.arcadeDrive(OI.operatorJoystick);	
 	}
 
 	/**
