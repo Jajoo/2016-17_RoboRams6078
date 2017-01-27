@@ -3,6 +3,7 @@ package org.usfirst.frc.team6078.robot;
 
 import edu.wpi.first.wpilibj.IterativeRobot;
 
+
 import edu.wpi.first.wpilibj.command.Command;
 import edu.wpi.first.wpilibj.command.Scheduler;
 import edu.wpi.first.wpilibj.livewindow.LiveWindow;
@@ -11,6 +12,9 @@ import edu.wpi.first.wpilibj.smartdashboard.SmartDashboard;
 
 import org.usfirst.frc.team6078.robot.commands.ExampleCommand;
 import org.usfirst.frc.team6078.robot.subsystems.ExampleSubsystem;
+
+import org.usfirst.frc.team6078.robot.drivetrain.*;
+
 
 //This is a test
 
@@ -107,6 +111,8 @@ public class Robot extends IterativeRobot {
 	@Override
 	public void teleopPeriodic() {
 		Scheduler.getInstance().run();
+		
+		Drivetrain.DrivetrainV1.drive.arcadeDrive(OI.operatorJoystick);
 	}
 
 	/**
