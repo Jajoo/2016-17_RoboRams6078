@@ -4,6 +4,7 @@ package org.usfirst.frc.team6078.robot;
 import edu.wpi.first.wpilibj.IterativeRobot;
 
 
+
 import edu.wpi.first.wpilibj.command.Command;
 import edu.wpi.first.wpilibj.command.Scheduler;
 import edu.wpi.first.wpilibj.livewindow.LiveWindow;
@@ -15,7 +16,7 @@ import org.usfirst.frc.team6078.robot.subsystems.ExampleSubsystem;
 
 import org.usfirst.frc.team6078.robot.drivetrain.*;
 
-import java.util.concurrent.TimeUnit; 
+import org.usfirst.frc.team6078.robot.auton.*; 
 
 /**
  * The VM is configured to automatically run this class, Eand to call the
@@ -96,6 +97,10 @@ public class Robot extends IterativeRobot {
 	@Override
 	public void autonomousPeriodic() {
 		Scheduler.getInstance().run();
+		
+		//Basically replaces RobotDrive for auton use
+		Auton.autonDrive(1);
+		
 	}
 
 	@Override
