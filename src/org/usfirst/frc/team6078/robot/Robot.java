@@ -11,8 +11,11 @@ import edu.wpi.first.wpilibj.livewindow.LiveWindow;
 import edu.wpi.first.wpilibj.smartdashboard.SendableChooser;
 import edu.wpi.first.wpilibj.smartdashboard.SmartDashboard;
 
+import java.util.concurrent.TimeUnit;
+
 import org.usfirst.frc.team6078.robot.commands.ExampleCommand;
 import org.usfirst.frc.team6078.robot.subsystems.Auton;
+import org.usfirst.frc.team6078.robot.subsystems.Drivetrain;
 import org.usfirst.frc.team6078.robot.subsystems.ExampleSubsystem;
 
 
@@ -118,7 +121,7 @@ public class Robot extends IterativeRobot {
 	public void teleopPeriodic() {
 		Scheduler.getInstance().run();
 		
-		//Drivetrain.drivetrainV1.drive.arcadeDrive(OI.operatorJoystick);
+		Drivetrain.drivetrainV1.drive.arcadeDrive(OI.operatorJoystick);
 		
 		
 	}
@@ -132,15 +135,51 @@ public class Robot extends IterativeRobot {
 		
 		//Should wiggle ports 0, 1, 2, 3
 		
-		Jaguar test = new Jaguar(1);
+		//Test_Functions.wiggleMotors();
 		
-		test.set(1);
+		RobotMap.frontLeftMotor.set(1);
+		try {
+			TimeUnit.SECONDS.sleep(2);
+		} catch (InterruptedException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+		RobotMap.frontLeftMotor.set(0);
 		
-		Test_Functions.wiggleMotors();
+		
+		RobotMap.frontRightMotor.set(1);
+		try {
+			TimeUnit.SECONDS.sleep(2);
+		} catch (InterruptedException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+		RobotMap.frontRightMotor.set(0);
+		
+		
+		RobotMap.backRightMotor.set(1);
+		try {
+			TimeUnit.SECONDS.sleep(2);
+		} catch (InterruptedException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+		RobotMap.backRightMotor.set(0);
+
+		
+		RobotMap.backLeftMotor.set(1);
+		try {
+			TimeUnit.SECONDS.sleep(2);
+		} catch (InterruptedException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+		RobotMap.backLeftMotor.set(0);
+	}
 		
 		
 		
 		
 		
 	}
-}
+
