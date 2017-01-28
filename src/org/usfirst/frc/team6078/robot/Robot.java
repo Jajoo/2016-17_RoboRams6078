@@ -2,9 +2,9 @@
 package org.usfirst.frc.team6078.robot;
 
 import edu.wpi.first.wpilibj.IterativeRobot;
-
-
-
+import edu.wpi.first.wpilibj.Jaguar;
+import edu.wpi.first.wpilibj.Joystick;
+import edu.wpi.first.wpilibj.RobotDrive;
 import edu.wpi.first.wpilibj.command.Command;
 import edu.wpi.first.wpilibj.command.Scheduler;
 import edu.wpi.first.wpilibj.livewindow.LiveWindow;
@@ -12,11 +12,9 @@ import edu.wpi.first.wpilibj.smartdashboard.SendableChooser;
 import edu.wpi.first.wpilibj.smartdashboard.SmartDashboard;
 
 import org.usfirst.frc.team6078.robot.commands.ExampleCommand;
+import org.usfirst.frc.team6078.robot.subsystems.Auton;
 import org.usfirst.frc.team6078.robot.subsystems.ExampleSubsystem;
 
-import org.usfirst.frc.team6078.robot.drivetrain.*;
-
-import org.usfirst.frc.team6078.robot.auton.*; 
 
 /**
  * The VM is configured to automatically run this class, Eand to call the
@@ -120,7 +118,9 @@ public class Robot extends IterativeRobot {
 	public void teleopPeriodic() {
 		Scheduler.getInstance().run();
 		
-		Drivetrain.drivetrainV1.drive.arcadeDrive(OI.operatorJoystick);	
+		//Drivetrain.drivetrainV1.drive.arcadeDrive(OI.operatorJoystick);
+		
+		
 	}
 
 	/**
@@ -131,6 +131,11 @@ public class Robot extends IterativeRobot {
 		LiveWindow.run();
 		
 		//Should wiggle ports 0, 1, 2, 3
+		
+		Jaguar test = new Jaguar(1);
+		
+		test.set(1);
+		
 		Test_Functions.wiggleMotors();
 		
 		

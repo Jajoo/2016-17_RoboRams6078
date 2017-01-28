@@ -9,6 +9,7 @@ public class Test_Functions {
 	public static void wiggleMotors() {
 		
 		SmartDashboard.putString("Front Left Motor Wiggle","Wiggle Front Left Motor");
+		System.out.println("This is a test");
 		RobotMap.frontLeftMotor.set(1);
 		try {
 			TimeUnit.SECONDS.sleep(2);
@@ -48,4 +49,6 @@ public class Test_Functions {
 		}
 		RobotMap.backLeftMotor.set(0);
 	}
-}
+	
+
+	}

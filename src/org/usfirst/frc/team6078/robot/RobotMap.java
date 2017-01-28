@@ -1,6 +1,6 @@
 package org.usfirst.frc.team6078.robot;
 
-import org.usfirst.frc.team6078.robot.constants.*;
+import org.usfirst.frc.team6078.robot.subsystems.Constants;
 
 import edu.wpi.first.wpilibj.Jaguar;
 
