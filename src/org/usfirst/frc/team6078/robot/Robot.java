@@ -2,16 +2,12 @@
 package org.usfirst.frc.team6078.robot;
 
 import edu.wpi.first.wpilibj.IterativeRobot;
-import edu.wpi.first.wpilibj.Jaguar;
-import edu.wpi.first.wpilibj.Joystick;
-import edu.wpi.first.wpilibj.RobotDrive;
+
 import edu.wpi.first.wpilibj.command.Command;
 import edu.wpi.first.wpilibj.command.Scheduler;
 import edu.wpi.first.wpilibj.livewindow.LiveWindow;
 import edu.wpi.first.wpilibj.smartdashboard.SendableChooser;
 import edu.wpi.first.wpilibj.smartdashboard.SmartDashboard;
-
-import java.util.concurrent.TimeUnit;
 
 import org.usfirst.frc.team6078.robot.commands.ExampleCommand;
 import org.usfirst.frc.team6078.robot.subsystems.Auton;
@@ -121,7 +117,11 @@ public class Robot extends IterativeRobot {
 	public void teleopPeriodic() {
 		Scheduler.getInstance().run();
 		
-		Drivetrain.drivetrainV1.drive.arcadeDrive(OI.operatorJoystick);
+		//Haven't tested this 1/28, hopefully this works 
+		while(isOperatorControl() && isEnabled()){
+			Drivetrain.drivetrainV1.drive.arcadeDrive(OI.operatorJoystick);
+			
+		}
 		
 		
 	}
@@ -135,46 +135,7 @@ public class Robot extends IterativeRobot {
 		
 		//Should wiggle ports 0, 1, 2, 3
 		
-		//Test_Functions.wiggleMotors();
-		
-		RobotMap.frontLeftMotor.set(1);
-		try {
-			TimeUnit.SECONDS.sleep(2);
-		} catch (InterruptedException e) {
-			// TODO Auto-generated catch block
-			e.printStackTrace();
-		}
-		RobotMap.frontLeftMotor.set(0);
-		
-		
-		RobotMap.frontRightMotor.set(1);
-		try {
-			TimeUnit.SECONDS.sleep(2);
-		} catch (InterruptedException e) {
-			// TODO Auto-generated catch block
-			e.printStackTrace();
-		}
-		RobotMap.frontRightMotor.set(0);
-		
-		
-		RobotMap.backRightMotor.set(1);
-		try {
-			TimeUnit.SECONDS.sleep(2);
-		} catch (InterruptedException e) {
-			// TODO Auto-generated catch block
-			e.printStackTrace();
-		}
-		RobotMap.backRightMotor.set(0);
-
-		
-		RobotMap.backLeftMotor.set(1);
-		try {
-			TimeUnit.SECONDS.sleep(2);
-		} catch (InterruptedException e) {
-			// TODO Auto-generated catch block
-			e.printStackTrace();
-		}
-		RobotMap.backLeftMotor.set(0);
+		Test_Functions.wiggleMotors();
 	}
 		
 		
