@@ -8,11 +8,8 @@ public class Constants {
 	public static int backLeftMotorPort = 2; 
 	public static int backRightMotorPort = 3;
 	
-	
-	
-	
-	//Ball Intake
-	public static int ballIntakePort = 5;
+	//Arm
+	public static int ballIntakePort = 4;
 	
 	//Joysticks
 	public static int xboxPort = 0;
