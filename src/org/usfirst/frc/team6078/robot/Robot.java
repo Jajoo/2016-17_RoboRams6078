@@ -12,6 +12,8 @@ import edu.wpi.first.wpilibj.livewindow.LiveWindow;
 import edu.wpi.first.wpilibj.smartdashboard.SendableChooser;
 import edu.wpi.first.wpilibj.smartdashboard.SmartDashboard;
 
+//I dunno dude
+
 
 /**
  * The VM is configured to automatically run this class, Eand to call the
@@ -93,7 +95,7 @@ public class Robot extends IterativeRobot {
 	public void autonomousPeriodic() {
 		Scheduler.getInstance().run();
 		
-		
+		Drivetrain.alernateDrive(1);
 		
 	}
 
