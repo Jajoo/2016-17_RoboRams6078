@@ -12,8 +12,13 @@ public class Drivetrain {
 	
 	}
 	
-	public static class alernateDrive {
-		
-	
+	public static void alernateDrive(int cet) {
+			
+			RobotMap.frontLeftMotor.set(cet);
+			RobotMap.frontRightMotor.set(cet);
+			
+			RobotMap.backLeftMotor.set(cet);
+			RobotMap.backRightMotor.set(cet);
+			
 	}
 }
