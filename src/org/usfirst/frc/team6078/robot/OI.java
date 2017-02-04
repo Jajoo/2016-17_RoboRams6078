@@ -23,4 +23,8 @@ public class OI {
 	//To operate ball intake
 	Joystick ballJoystick = new Joystick(Constants.flightStick);
 	
+	//idk
+	public static double operatorY = operatorJoystick.getY();
+	public static double operatorX = operatorJoystick.getX();
+	
 }

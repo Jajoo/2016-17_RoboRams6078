@@ -115,10 +115,9 @@ public class Robot extends IterativeRobot {
 	@Override
 	public void teleopPeriodic() {
 		Scheduler.getInstance().run();
-		
-		//Haven't tested this 1/28, hopefully this works 
+		 
 		while(isOperatorControl() && isEnabled()){
-			Drivetrain.drivetrainV1.drive.arcadeDrive(OI.operatorJoystick);
+			Drivetrain.drivetrainV1.drive.arcadeDrive(OI.operatorY,OI.operatorX);
 			
 			if (OI.operatorJoystick.getRawButton(3)) {
 				
