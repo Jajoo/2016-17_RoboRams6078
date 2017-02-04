@@ -120,6 +120,12 @@ public class Robot extends IterativeRobot {
 		while(isOperatorControl() && isEnabled()){
 			Drivetrain.drivetrainV1.drive.arcadeDrive(OI.operatorJoystick);
 			
+			if (OI.operatorJoystick.getRawButton(3)) {
+				
+				RobotMap.shootyTootyMotor.set(.30);
+				
+			}
+			
 		}
 		
 		

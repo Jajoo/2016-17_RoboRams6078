@@ -4,6 +4,7 @@ import org.usfirst.frc.team6078.robot.subsystems.Constants;
 
 import edu.wpi.first.wpilibj.Jaguar;
 import edu.wpi.first.wpilibj.Spark;
+import edu.wpi.first.wpilibj.Victor;
 
 /**
  * The RobotMap is a mapping from the ports sensors and actuators are wired into
@@ -19,8 +20,8 @@ public class RobotMap {
 	public static Spark backLeftMotor = new Spark(Constants.backLeftMotorPort);
 	public static Spark backRightMotor = new Spark(Constants.backRightMotorPort);
 	
-	//Defining motor for ball intake
-	public static Jaguar ballIntake = new Jaguar(Constants.ballIntakePort);
+	//Defining motors for shooty tooty
+	public static Victor shootyTootyMotor = new Victor(Constants.shootyTootyPort);
 
 	
 	

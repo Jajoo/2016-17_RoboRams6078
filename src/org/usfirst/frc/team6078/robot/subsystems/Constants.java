@@ -3,13 +3,13 @@ package org.usfirst.frc.team6078.robot.subsystems;
 public class Constants {
 	
 	//Drivetrain motor ports on rio 
-	public static int frontLeftMotorPort = 0;
-	public static int frontRightMotorPort = 1;
-	public static int backLeftMotorPort = 2; 
-	public static int backRightMotorPort = 3;
+	public static int frontLeftMotorPort = 1;
+	public static int frontRightMotorPort = 0;
+	public static int backLeftMotorPort = 3; 
+	public static int backRightMotorPort = 2;
 	
-	//Arm
-	public static int ballIntakePort = 4;
+	//Ball Shooter
+	public static int shootyTootyPort = 4;
 	
 	//Joysticks
 	public static int xboxPort = 0;
