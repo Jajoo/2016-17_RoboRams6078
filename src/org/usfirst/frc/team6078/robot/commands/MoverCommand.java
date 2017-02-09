@@ -1,35 +1,28 @@
 package org.usfirst.frc.team6078.robot.commands;
 
-import edu.wpi.first.wpilibj.command.Command;
-
 import org.usfirst.frc.team6078.robot.Robot;
-
 import org.usfirst.frc.team6078.robot.subsystems.*;
 
-/**
- *
- */
-public class ExampleCommand extends Command {
-	public ExampleCommand() {
-		// Use requires() here to declare subsystem dependencies
-		
-		//Drivetrain.alernateDrive(1);
-		
-		requires(Robot.exampleSubsystem);
-	}
+import edu.wpi.first.wpilibj.command.Command;
+
+public class MoverCommand extends Command{
 	
+	public MoverCommand () {
+		
+
+	}
 
 	// Called just before this Command runs the first time
 	@Override
 	protected void initialize() {
+		Drivetrain.alernateDrive(1);
+		
 	}
 
 	// Called repeatedly when this Command is scheduled to run
 	@Override
 	protected void execute() {
-		
-		//Drivetrain.alernateDrive(1);
-		
+	
 	}
 
 	// Make this return true when this Command no longer needs to run execute()
@@ -48,4 +41,5 @@ public class ExampleCommand extends Command {
 	@Override
 	protected void interrupted() {
 	}
+	
 }

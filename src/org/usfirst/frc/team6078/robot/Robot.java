@@ -1,7 +1,9 @@
 //this is a test
 package org.usfirst.frc.team6078.robot;
 
-import org.usfirst.frc.team6078.robot.commands.ExampleCommand;
+//import org.usfirst.frc.team6078.robot.commands.AutonChooser;
+
+import org.usfirst.frc.team6078.robot.commands.*;
 import org.usfirst.frc.team6078.robot.subsystems.Drivetrain;
 import org.usfirst.frc.team6078.robot.subsystems.ExampleSubsystem;
 
@@ -10,6 +12,7 @@ import edu.wpi.first.wpilibj.command.Command;
 import edu.wpi.first.wpilibj.command.Scheduler;
 import edu.wpi.first.wpilibj.livewindow.LiveWindow;
 import edu.wpi.first.wpilibj.smartdashboard.SendableChooser;
+//import edu.wpi.first.wpilibj.smartdashboard.SmartDashboard;
 import edu.wpi.first.wpilibj.smartdashboard.SmartDashboard;
 
 //I dunno dude
@@ -28,11 +31,13 @@ public class Robot extends IterativeRobot {
 	public static final ExampleSubsystem exampleSubsystem = new ExampleSubsystem();
 	public static OI oi;
 
-	//Presume this is the timer?
+	//Auto autonomous checker
 	Command autonomousCommand;
 	
 	//No idea what this does 
 	SendableChooser<Command> chooser = new SendableChooser<>();
+	
+	//moverChooser = new SendableChooser();
 
 	/**
 	 * This function is run when the robot is first started up and should be
@@ -42,7 +47,8 @@ public class Robot extends IterativeRobot {
 	public void robotInit() {
 		oi = new OI();
 		chooser.addDefault("Default Auto", new ExampleCommand());
-		// chooser.addObject("My Auto", new MyAutoCommand());
+		//chooser.addObject("Im Dumb", new Command());
+		chooser.addObject("TestAuton", new MoverCommand());
 		SmartDashboard.putData("Auto mode", chooser);
 	}
 
@@ -95,7 +101,7 @@ public class Robot extends IterativeRobot {
 	public void autonomousPeriodic() {
 		Scheduler.getInstance().run();
 		
-		Drivetrain.alernateDrive(1);
+		//Drivetrain.alernateDrive(1);
 		
 	}
 
