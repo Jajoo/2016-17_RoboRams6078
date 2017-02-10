@@ -4,6 +4,7 @@ package org.usfirst.frc.team6078.robot;
 //import org.usfirst.frc.team6078.robot.commands.AutonChooser;
 
 import org.usfirst.frc.team6078.robot.commands.*;
+
 import org.usfirst.frc.team6078.robot.subsystems.Drivetrain;
 import org.usfirst.frc.team6078.robot.subsystems.ExampleSubsystem;
 
@@ -12,8 +13,10 @@ import edu.wpi.first.wpilibj.command.Command;
 import edu.wpi.first.wpilibj.command.Scheduler;
 import edu.wpi.first.wpilibj.livewindow.LiveWindow;
 import edu.wpi.first.wpilibj.smartdashboard.SendableChooser;
+//Not sure why this is commented out but it works so...
 //import edu.wpi.first.wpilibj.smartdashboard.SmartDashboard;
 import edu.wpi.first.wpilibj.smartdashboard.SmartDashboard;
+import edu.wpi.first.wpilibj.CameraServer;
 
 //I dunno dude
 
@@ -34,7 +37,7 @@ public class Robot extends IterativeRobot {
 	//Auto autonomous checker
 	Command autonomousCommand;
 	
-	//No idea what this does 
+	//For Smart Dashboard Options
 	SendableChooser<Command> chooser = new SendableChooser<>();
 	
 	//moverChooser = new SendableChooser();
@@ -46,10 +49,13 @@ public class Robot extends IterativeRobot {
 	@Override
 	public void robotInit() {
 		oi = new OI();
-		chooser.addDefault("Default Auto", new ExampleCommand());
-		//chooser.addObject("Im Dumb", new Command());
-		chooser.addObject("TestAuton", new MoverCommand());
+		//Delete "ExampleCommand" and make sure everything still works, then commit the deletions
+		//chooser.addDefault("Default Auto", new ExampleCommand());
+		chooser.addDefault("TestAuton", new MoverCommand());
 		SmartDashboard.putData("Auto mode", chooser);
+		
+		//Should let us have camera on SmartDashboard
+		CameraServer.getInstance().startAutomaticCapture();
 	}
 
 	/**
@@ -123,8 +129,11 @@ public class Robot extends IterativeRobot {
 		Scheduler.getInstance().run();
 		 
 		while(isOperatorControl() && isEnabled()){
+			
+			//Same arcadeDrive, just allows raw Y and X input, hopefully allows us to slow down robot
 			Drivetrain.drivetrainV1.drive.arcadeDrive(OI.operatorY,OI.operatorX);
 			
+			//This Moves "Shooty Tooty" when X button on the xbox controller is pressed, stops motor when it is released
 			if (OI.operatorJoystick.getRawButton(3)) {
 				
 				RobotMap.shootyTootyMotor.set(.30);
