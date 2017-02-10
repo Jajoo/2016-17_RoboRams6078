@@ -1,6 +1,8 @@
 //this is a test
 package org.usfirst.frc.team6078.robot;
 
+import java.util.concurrent.TimeUnit;
+
 import org.usfirst.frc.team6078.robot.commands.ExampleCommand;
 import org.usfirst.frc.team6078.robot.subsystems.Drivetrain;
 import org.usfirst.frc.team6078.robot.subsystems.ExampleSubsystem;
@@ -11,6 +13,9 @@ import edu.wpi.first.wpilibj.command.Scheduler;
 import edu.wpi.first.wpilibj.livewindow.LiveWindow;
 import edu.wpi.first.wpilibj.smartdashboard.SendableChooser;
 import edu.wpi.first.wpilibj.smartdashboard.SmartDashboard;
+import edu.wpi.first.wpilibj.CameraServer;
+import edu.wpi.first.wpilibj.IterativeRobot;
+
 
 //I dunno dude
 
@@ -44,6 +49,12 @@ public class Robot extends IterativeRobot {
 		chooser.addDefault("Default Auto", new ExampleCommand());
 		// chooser.addObject("My Auto", new MyAutoCommand());
 		SmartDashboard.putData("Auto mode", chooser);
+	}
+	public class cam0 extends IterativeRobot {
+		@Override
+		public void robotInit() {
+			CameraServer.getInstance().startAutomaticCapture();
+		}
 	}
 
 	/**
@@ -96,6 +107,22 @@ public class Robot extends IterativeRobot {
 		Scheduler.getInstance().run();
 		
 		Drivetrain.alernateDrive(1);
+		
+		try {
+			TimeUnit.SECONDS.sleep(1);
+		} catch (InterruptedException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+		Drivetrain.alernateDrive(0);
+		
+		Drivetrain.alernateDrive(1);
+		try {
+			TimeUnit.SECONDS.sleep(1);
+		} catch (InterruptedException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
 		
 	}
 
