@@ -1,0 +1,139 @@
+[33mcommit 329f7a2a93f49061c4975f9f5fa92a70c1835291[m
+Author: Joshua Jenkins <jenkia18@mail.lcc.edu>
+Date:   Thu Feb 9 14:04:32 2017 -0600
+
+    Added smart dashboard autonomous capability
+
+[33mcommit 6fb91d769985fad6aa3656faaa6832d968f5762c[m
+Author: Joshua Jenkins <jenkia18@mail.lcc.edu>
+Date:   Sat Feb 4 13:01:53 2017 -0600
+
+    Changed up RobotDrive to use X and Y instead of just the joystick, hooe this works
+
+[33mcommit 32d2d33e9e4f253bf65051f2679e9d9e7f96322f[m
+Author: Joshua Jenkins <jenkia18@mail.lcc.edu>
+Date:   Sat Feb 4 12:42:55 2017 -0600
+
+    Added button functionality for Shooty Tooty
+
+[33mcommit 8d169b53fd475a1c144402c7b17e6cadacfb1d5b[m
+Author: Joshua Jenkins <jenkia18@mail.lcc.edu>
+Date:   Mon Jan 30 14:04:27 2017 -0600
+
+    Changed ports
+
+[33mcommit ef28ef51aabbcad1759b5b35a379d9bb3f1a84f7[m
+Author: Joshua Jenkins <jenkia18@mail.lcc.edu>
+Date:   Mon Jan 30 13:57:10 2017 -0600
+
+    Testing git Branches
+
+[33mcommit 1d553390220783f69110c25264f56bd21f03d067[m
+Author: Joshua Jenkins <jenkia18@mail.lcc.edu>
+Date:   Mon Jan 30 10:59:17 2017 -0600
+
+    Removed 'Auton' Subsystem and refactored it into other relevant subsystems
+
+[33mcommit f71d42e449a9aac38da16d0cb58ce168cede8054[m
+Author: Joshua Jenkins <jenkia18@mail.lcc.edu>
+Date:   Sat Jan 28 16:46:03 2017 -0600
+
+    Hopefully fixed issue of not being able to  drive
+
+[33mcommit 3c1872339e889d62f194f979b7190b758f0cafe1[m
+Merge: 1ca9d37 2d8c538
+Author: Joshua Jenkins <jenkia18@mail.lcc.edu>
+Date:   Sat Jan 28 16:27:42 2017 -0600
+
+    Merge branch 'master' of https://github.com/Jajoo/2016-17_RoboRams6078
+
+[33mcommit 1ca9d37ef601038ce89782d654e17e34573b3f24[m
+Author: Joshua Jenkins <jenkia18@mail.lcc.edu>
+Date:   Sat Jan 28 16:27:12 2017 -0600
+
+    Cleaned up Test_Functions
+
+[33mcommit 2d8c538374abe62eb450b6de1f0269a5e4ee2d77[m
+Author: Jajoo <hersheyman123@hotmail.com>
+Date:   Sat Jan 28 15:25:41 2017 -0600
+
+    Update README.md
+
+[33mcommit 9fdd84f2f9de6697c7e14c648bdb26b723d75688[m
+Author: Jajoo <hersheyman123@hotmail.com>
+Date:   Sat Jan 28 15:23:27 2017 -0600
+
+    Create README.md
+
+[33mcommit e723a02078e9014abeaf1be277ab6ca48ba2e6e9[m
+Author: Joshua Jenkins <jenkia18@mail.lcc.edu>
+Date:   Sat Jan 28 13:33:03 2017 -0600
+
+    Reorginized CodeBased
+
+[33mcommit c42e886a1dd6fbf51facc9f710da5703667e2f4c[m
+Author: Joshua Jenkins <jenkia18@mail.lcc.edu>
+Date:   Sat Jan 28 11:04:00 2017 -0600
+
+    Redoes RobotDrive for auton use
+
+[33mcommit 432246889040d2144f6e7d109164b92f9e770c0f[m
+Merge: 438fe5b 5323889
+Author: Joshua Jenkins <jenkia18@mail.lcc.edu>
+Date:   Sat Jan 28 10:50:37 2017 -0600
+
+    Merge branch 'master' of https://github.com/Jajoo/2016-17_RoboRams6078
+
+[33mcommit 438fe5bfba3d857e9912323e94dba05a4b3feb7e[m
+Author: Joshua Jenkins <jenkia18@mail.lcc.edu>
+Date:   Sat Jan 28 10:49:56 2017 -0600
+
+    Added Auton version of RobotDrive, hopefully it works
+
+[33mcommit 5323889e8ee65046746dcc407012c429db593f16[m
+Author: JT <jedimasterjt@gmail.com>
+Date:   Sat Jan 28 09:47:04 2017 -0500
+
+    Test
+
+[33mcommit 8209eb6bbec3679c7cd9ca95edc4079387a596bf[m
+Author: Joshua Jenkins <jenkia18@mail.lcc.edu>
+Date:   Fri Jan 27 08:01:41 2017 -0600
+
+    Class Names Fixed
+
+[33mcommit 373d69d543662e3178c00b81749b9eab098e2cf2[m
+Author: Joshua Jenkins <jenkia18@mail.lcc.edu>
+Date:   Thu Jan 26 22:01:29 2017 -0600
+
+    Added Motor Testing w/ Smart Dashboard Functionality
+
+[33mcommit b80dcd289d34c74d86abfb3eeb73031e7c4f292c[m
+Author: Joshua Jenkins <jenkia18@mail.lcc.edu>
+Date:   Thu Jan 26 20:10:34 2017 -0600
+
+    Comments
+
+[33mcommit 52050dd3ed78e0b95f0132e95948e5216a5cf4f8[m
+Author: Joshua Jenkins <jenkia18@mail.lcc.edu>
+Date:   Thu Jan 26 20:08:35 2017 -0600
+
+    RobotDrive, Take 1
+
+[33mcommit 6b13111912b47a03b45ff3861b6c2d7bc2bac492[m
+Author: Joshua Jenkins <jenkia18@mail.lcc.edu>
+Date:   Thu Jan 26 19:57:47 2017 -0600
+
+    Drivetrain Stuff
+
+[33mcommit 5f0e1b1eee2ca9a64c414ea4638aa08d5b9bafc6[m
+Author: Joshua Jenkins <jenkia18@mail.lcc.edu>
+Date:   Thu Jan 26 20:37:23 2017 -0600
+
+    This is a git test
+
+[33mcommit 9697bdb5fda950c1272d9cfa61a944a569cd7e4b[m
+Author: Joshua Jenkins <jenkia18@mail.lcc.edu>
+Date:   Thu Jan 26 19:10:28 2017 -0600
+
+    First Commit

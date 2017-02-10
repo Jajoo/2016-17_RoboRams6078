@@ -20,7 +20,7 @@ public class RobotMap {
 	public static Spark backLeftMotor = new Spark(Constants.backLeftMotorPort);
 	public static Spark backRightMotor = new Spark(Constants.backRightMotorPort);
 	
-	//Defining motors for shooty tooty
+	//Defining motors for shooty tooty, the ball shooter
 	public static Victor shootyTootyMotor = new Victor(Constants.shootyTootyPort);
 
 	
