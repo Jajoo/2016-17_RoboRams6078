@@ -58,15 +58,13 @@ public class Robot extends IterativeRobot {
 	public void robotInit() {
 		oi = new OI();
 		//Delete "ExampleCommand" and make sure everything still works, then commit the deletions
-		//chooser.addDefault("Default Auto", new ExampleCommand());
-		//chooser.addDefault("TestAuton", new MoverCommand());
+		chooser.addDefault("Default Auto", new ExampleCommand());
+		chooser.addDefault("TestAuton", new MoverCommand());
 		SmartDashboard.putData("Auto mode", chooser);
 		
 		//Should let us have camera on SmartDashboard
-<<<<<<< HEAD
 		//CameraServer.getInstance().startAutomaticCapture();
-	}
-=======
+
 		CameraServer.getInstance().startAutomaticCapture();
 	
 	Thread visionThread = new Thread(() -> {
@@ -106,7 +104,7 @@ public class Robot extends IterativeRobot {
 	visionThread.start();
 }
 
->>>>>>> a255d0dd54b05905466392eb2d33918691dc9b0f
+
 
 	/**
 	 * This function is called once each time the robot enters Disabled mode.
