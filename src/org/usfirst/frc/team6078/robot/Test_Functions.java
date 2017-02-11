@@ -8,6 +8,8 @@ public class Test_Functions {
 	
 	public static void wiggleMotors() {
 		
+		
+		//Wiggles the motors
 		RobotMap.frontLeftMotor.set(1);
 		try {
 			TimeUnit.SECONDS.sleep(2);

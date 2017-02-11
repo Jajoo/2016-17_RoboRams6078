@@ -2,7 +2,7 @@ package org.usfirst.frc.team6078.robot.subsystems;
 
 public class Constants {
 	
-	//Drivetrain motor ports on rio 
+	//Drivetrain motor ports on rio, numbers are funky because Kelsey wired them wrong. Thanks Kelsey 
 	public static int frontLeftMotorPort = 1;
 	public static int frontRightMotorPort = 0;
 	public static int backLeftMotorPort = 3; 
@@ -10,6 +10,9 @@ public class Constants {
 	
 	//Ball Shooter
 	public static int shootyTootyPort = 4;
+	
+	//Ball Intake
+	public static int ballyTakePort = 5;
 	
 	//Joysticks
 	public static int xboxPort = 0;

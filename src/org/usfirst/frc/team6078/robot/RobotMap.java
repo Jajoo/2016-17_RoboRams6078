@@ -23,6 +23,8 @@ public class RobotMap {
 	//Defining motors for shooty tooty, the ball shooter
 	public static Victor shootyTootyMotor = new Victor(Constants.shootyTootyPort);
 
+	//Defining Motors for bally take, the ball intake
+	public static Victor ballyTakeMotor = new Victor(Constants.ballyTakePort);
 	
 	
 	

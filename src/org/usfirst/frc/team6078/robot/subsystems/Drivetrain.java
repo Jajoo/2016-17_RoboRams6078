@@ -32,6 +32,7 @@ public class Drivetrain {
 			 * left. If you plug in 2, the right motors will go forward at full speed, the left 
 			 * motors backward at full speed, turning the robot right. 
 			 */
+			//UNTESTED 12:30 2/10
 			else if (cet > 1 && cet <= 4) {
 				
 				int cetLeft;

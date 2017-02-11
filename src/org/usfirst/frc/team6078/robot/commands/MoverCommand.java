@@ -15,6 +15,8 @@ public class MoverCommand extends Command{
 	// Called just before this Command runs the first time
 	@Override
 	protected void initialize() {
+		
+		//Moves all motors foward full speed, nothing complicated yet
 		Drivetrain.alernateDrive(1);
 		
 	}

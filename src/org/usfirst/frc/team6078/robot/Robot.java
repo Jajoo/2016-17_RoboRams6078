@@ -55,7 +55,7 @@ public class Robot extends IterativeRobot {
 		SmartDashboard.putData("Auto mode", chooser);
 		
 		//Should let us have camera on SmartDashboard
-		CameraServer.getInstance().startAutomaticCapture();
+		//CameraServer.getInstance().startAutomaticCapture();
 	}
 
 	/**
@@ -134,16 +134,16 @@ public class Robot extends IterativeRobot {
 			Drivetrain.drivetrainV1.drive.arcadeDrive(OI.operatorY,OI.operatorX);
 			
 			//This Moves "Shooty Tooty" when X button on the xbox controller is pressed, stops motor when it is released
-			if (OI.operatorJoystick.getRawButton(3)) {
+			//if (OI.ballShootyJoystick.getRawButton(3)) {
 				
-				RobotMap.shootyTootyMotor.set(.30);
+				//RobotMap.shootyTootyMotor.set(.30);
 				
 			}
 			
 		}
 		
 		
-	}
+	//}
 
 	/**
 	 * This function is called periodically during test mode
