@@ -17,4 +17,7 @@ public class Constants {
 	//Joysticks
 	public static int xboxPort = 0;
 	public static int flightStick = 1;
+	
+	//Joystick Handicap
+	public static double handicap = -2;
 }

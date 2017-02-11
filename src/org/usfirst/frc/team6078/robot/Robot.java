@@ -9,11 +9,12 @@ import org.opencv.imgproc.Imgproc;
 //import org.usfirst.frc.team6078.robot.commands.AutonChooser;
 
 import org.usfirst.frc.team6078.robot.commands.*;
-
+import org.usfirst.frc.team6078.robot.subsystems.Constants;
 import org.usfirst.frc.team6078.robot.subsystems.Drivetrain;
 import org.usfirst.frc.team6078.robot.subsystems.ExampleSubsystem;
 
 import edu.wpi.first.wpilibj.IterativeRobot;
+import edu.wpi.first.wpilibj.Joystick;
 import edu.wpi.first.wpilibj.command.Command;
 import edu.wpi.first.wpilibj.command.Scheduler;
 import edu.wpi.first.wpilibj.livewindow.LiveWindow;
@@ -63,8 +64,6 @@ public class Robot extends IterativeRobot {
 		SmartDashboard.putData("Auto mode", chooser);
 		
 		//Should let us have camera on SmartDashboard
-		//CameraServer.getInstance().startAutomaticCapture();
-
 		CameraServer.getInstance().startAutomaticCapture();
 	
 	Thread visionThread = new Thread(() -> {
@@ -179,18 +178,23 @@ public class Robot extends IterativeRobot {
 		while(isOperatorControl() && isEnabled()){
 			
 			//Same arcadeDrive, just allows raw Y and X input, hopefully allows us to slow down robot
-			//Drivetrain.drivetrainV1.drive.arcadeDrive(OI.operatorY,OI.operatorX);
+			
+			Drivetrain.turboButton();
+			
+			Drivetrain.drivetrainV1.drive.arcadeDrive(OI.operatorJoystick.getY() / Constants.handicap, OI.operatorJoystick.getX() / Constants.handicap);
 			
 			//This Moves "Shooty Tooty" when X button on the xbox controller is pressed, stops motor when it is released
-			//if (OI.ballShootyJoystick.getRawButton(3)) {
+			if (OI.ballShootyJoystick.getRawButton(3)) {
 				
-				//RobotMap.shootyTootyMotor.set(.30);
+				RobotMap.shootyTootyMotor.set(.30);
 				
 			}
 			
 		}
+			
+	}
 		
-		
+
 	//}
 
 	/**

@@ -18,7 +18,7 @@ import org.usfirst.frc.team6078.robot.subsystems.*;
 public class OI {
 
 	//To drive the bot
-	static Joystick operatorJoystick = new Joystick(Constants.xboxPort);
+	public static Joystick operatorJoystick = new Joystick(Constants.xboxPort);
 	
 	//To operate ball intake and shooter
 	static Joystick ballShootyJoystick = new Joystick(Constants.flightStick);

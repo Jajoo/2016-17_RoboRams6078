@@ -2,7 +2,14 @@ package org.usfirst.frc.team6078.robot.subsystems;
 
 import org.usfirst.frc.team6078.robot.RobotMap;
 
+
 import edu.wpi.first.wpilibj.RobotDrive;
+
+
+import org.usfirst.frc.team6078.robot.*;
+
+import org.usfirst.frc.team6078.robot.subsystems.*;
+
 
 public class Drivetrain {
 	
@@ -51,5 +58,24 @@ public class Drivetrain {
 				
 			}
 			
+	}
+
+	public static void turboButton() {
+		
+		boolean buttonValue;
+		
+		buttonValue = OI.operatorJoystick.getRawButton(3);
+		
+		if (buttonValue = true) {
+			
+			Constants.handicap = -1;
+		}
+		
+		else if (buttonValue = false) {
+			
+			Constants.handicap = -1.4;
+			
+		}
+		
 	}
 }
