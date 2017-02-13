@@ -24,12 +24,15 @@ import edu.wpi.first.wpilibj.smartdashboard.SendableChooser;
 import edu.wpi.first.wpilibj.smartdashboard.SmartDashboard;
 import edu.wpi.cscore.CvSink;
 import edu.wpi.cscore.CvSource;
+import edu.wpi.cscore.MjpegServer;
 import edu.wpi.cscore.UsbCamera;
+import edu.wpi.cscore.VideoMode.PixelFormat;
 import edu.wpi.first.wpilibj.CameraServer;
 import org.opencv.core.Core;
 import org.opencv.core.CvType;
 import org.opencv.core.Mat;
-
+import edu.wpi.first.wpilibj.CameraServer;
+import edu.wpi.first.wpilibj.IterativeRobot;
 
 /**
  * The VM is configured to automatically run this class, Eand to call the
@@ -64,19 +67,28 @@ public class Robot extends IterativeRobot {
 		chooser.addDefault("TestAuton", new MoverCommand());
 		SmartDashboard.putData("Auto mode", chooser);
 		
-		//Should let us have camera on SmartDashboard
-		CameraServer.getInstance().startAutomaticCapture();
+		// Enables Camera 0 on SmartDashboard
+		UsbCamera Cam0 = new UsbCamera ("Cam0", 0);
+		CameraServer.getInstance().startAutomaticCapture(Cam0);
+		
+		// Enables Camera 1 on SmartDashboard
+		UsbCamera Cam1 = new UsbCamera ("Cam1", 1);
+		CameraServer.getInstance().startAutomaticCapture(Cam1);
+
+
+		// May need to delete this later. I believe this should blur the image???? Really not sure. Gl to me :)
+		//UsbCamera usbCamera = new UsbCamera("USB Camera 0", 0);
+		//MjpegServer mjpegServer1 = new MjpegServer("serve_USB Camera 0", 1181);
+		//mjpegServer1.setSource(usbCamera); CvSink cvSink = new CvSink("opencv_USB Camera 0");
+		//cvSink.setSource(usbCamera);
+		//CvSource outputStream = new CvSource("Blur", PixelFormat.kMJPEG, 640, 480, 30);
+		//MjpegServer mjpegServer2 = new MjpegServer("serve_Blur", 1182);
+		//mjpegServer2.setSource(outputStream);
+		//CvSink cvSink1 = CameraServer.getInstance().getVideo();
+		//CvSource outputStream1 = CameraServer.getInstance().putVideo("Blur", 640, 480);
 	}
 
-		    public static void main(String[] args) {
-		        System.out.println("Welcome to OpenCV " + Core.VERSION);
-		        System.loadLibrary(Core.NATIVE_LIBRARY_NAME);
-		        Mat m  = Mat.eye(3, 3, CvType.CV_8UC1);
-		        System.out.println("m = " + m.dump());
-		    }
 	
-	
-
 
 	/**
 	 * This function is called once each time the robot enters Disabled mode.
