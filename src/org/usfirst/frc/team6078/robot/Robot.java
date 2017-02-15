@@ -70,22 +70,14 @@ public class Robot extends IterativeRobot {
 		// Enables Camera 0 on SmartDashboard
 		UsbCamera Cam0 = new UsbCamera ("Cam0", 0);
 		CameraServer.getInstance().startAutomaticCapture(Cam0);
+        //Cam0.setResolution(512, 212);
+
 		
 		// Enables Camera 1 on SmartDashboard
 		UsbCamera Cam1 = new UsbCamera ("Cam1", 1);
 		CameraServer.getInstance().startAutomaticCapture(Cam1);
+        //Cam1.setResolution(512, 212);
 
-
-		// May need to delete this later. I believe this should blur the image???? Really not sure. Gl to me :)
-		//UsbCamera usbCamera = new UsbCamera("USB Camera 0", 0);
-		//MjpegServer mjpegServer1 = new MjpegServer("serve_USB Camera 0", 1181);
-		//mjpegServer1.setSource(usbCamera); CvSink cvSink = new CvSink("opencv_USB Camera 0");
-		//cvSink.setSource(usbCamera);
-		//CvSource outputStream = new CvSource("Blur", PixelFormat.kMJPEG, 640, 480, 30);
-		//MjpegServer mjpegServer2 = new MjpegServer("serve_Blur", 1182);
-		//mjpegServer2.setSource(outputStream);
-		//CvSink cvSink1 = CameraServer.getInstance().getVideo();
-		//CvSource outputStream1 = CameraServer.getInstance().putVideo("Blur", 640, 480);
 	}
 
 	
