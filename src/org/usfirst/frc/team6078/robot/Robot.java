@@ -144,12 +144,7 @@ public class Robot extends IterativeRobot {
 		// continue until interrupted by another command, remove
 		// this line or comment it out.
 		if (autonomousCommand != null)
-			autonomousCommand.cancel();
-		
-		//Servo
-		Drivetrain.servoButton();
-		
-		
+			autonomousCommand.cancel();		
 
 	}
 
@@ -163,7 +158,7 @@ public class Robot extends IterativeRobot {
 		while(isOperatorControl() && isEnabled()){
 			
 			//Servo
-			//Drivetrain.servoButton();
+			Drivetrain.servoButton();
 			
 			//Same arcadeDrive, just allows raw Y and X input, hopefully allows us to slow down robot
 			
