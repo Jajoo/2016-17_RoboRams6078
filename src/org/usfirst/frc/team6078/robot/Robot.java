@@ -15,6 +15,7 @@ import org.usfirst.frc.team6078.robot.subsystems.ExampleSubsystem;
 
 import edu.wpi.first.wpilibj.IterativeRobot;
 import edu.wpi.first.wpilibj.Joystick;
+import edu.wpi.first.wpilibj.Servo;
 import edu.wpi.first.wpilibj.command.Command;
 import edu.wpi.first.wpilibj.command.Scheduler;
 import edu.wpi.first.wpilibj.livewindow.LiveWindow;
@@ -67,17 +68,17 @@ public class Robot extends IterativeRobot {
 		chooser.addDefault("TestAuton", new MoverCommand());
 		SmartDashboard.putData("Auto mode", chooser);
 		
-		// Enables Camera 0 on SmartDashboard
+		//Enables Camera 0 on SmartDashboard
 		UsbCamera Cam0 = new UsbCamera ("Cam0", 0);
 		CameraServer.getInstance().startAutomaticCapture(Cam0);
-        //Cam0.setResolution(512, 212);
+        Cam0.setResolution(1080, 720);
 
 		
-		// Enables Camera 1 on SmartDashboard
-		UsbCamera Cam1 = new UsbCamera ("Cam1", 1);
-		CameraServer.getInstance().startAutomaticCapture(Cam1);
-        //Cam1.setResolution(512, 212);
-
+		//Enables a second (Camera 1) on SmartDashboard
+		//UsbCamera Cam1 = new UsbCamera ("Cam1", 1);
+		//CameraServer.getInstance().startAutomaticCapture(Cam1);
+        //Cam1.setResolution(1080, 720);
+	
 	}
 
 	
@@ -122,6 +123,7 @@ public class Robot extends IterativeRobot {
 		// schedule the autonomous command (example)
 		if (autonomousCommand != null)
 			autonomousCommand.start();
+
 	}
 
 	/**
@@ -143,6 +145,12 @@ public class Robot extends IterativeRobot {
 		// this line or comment it out.
 		if (autonomousCommand != null)
 			autonomousCommand.cancel();
+		
+		//Servo
+		Drivetrain.servoButton();
+		
+		
+
 	}
 
 	/**
@@ -153,6 +161,9 @@ public class Robot extends IterativeRobot {
 		Scheduler.getInstance().run();
 		 
 		while(isOperatorControl() && isEnabled()){
+			
+			//Servo
+			Drivetrain.servoButton();
 			
 			//Same arcadeDrive, just allows raw Y and X input, hopefully allows us to slow down robot
 			

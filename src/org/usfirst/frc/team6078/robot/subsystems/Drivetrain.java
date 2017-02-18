@@ -4,7 +4,7 @@ import org.usfirst.frc.team6078.robot.RobotMap;
 
 
 import edu.wpi.first.wpilibj.RobotDrive;
-
+import edu.wpi.first.wpilibj.Servo;
 
 import org.usfirst.frc.team6078.robot.*;
 
@@ -78,4 +78,15 @@ public class Drivetrain {
 		}
 		
 	}
+	public static void servoButton() {
+		boolean buttonValue2;	
+		buttonValue2 = OI.operatorJoystick.getRawButton(4);
+		if (buttonValue2 = true) {
+			Servo CameraServo = new Servo(9);
+			CameraServo.set(1.0);
+			
+		}
+		
+	}
+	
 }
