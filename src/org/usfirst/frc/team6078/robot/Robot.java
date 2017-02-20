@@ -158,7 +158,7 @@ public class Robot extends IterativeRobot {
 		while(isOperatorControl() && isEnabled()){
 			
 			//Servo
-			Drivetrain.servoButton();
+			//Drivetrain.servoButton();
 			
 			//Same arcadeDrive, just allows raw Y and X input, hopefully allows us to slow down robot
 			
