@@ -75,9 +75,9 @@ public class Robot extends IterativeRobot {
 
 		
 		//Enables a second (Camera 1) on SmartDashboard
-		//UsbCamera Cam1 = new UsbCamera ("Cam1", 1);
-		//CameraServer.getInstance().startAutomaticCapture(Cam1);
-        //Cam1.setResolution(1080, 720);
+		UsbCamera Cam1 = new UsbCamera ("Cam1", 1);
+		CameraServer.getInstance().startAutomaticCapture(Cam1);
+        //Cam1.setResolution(240, 240);
 	
 	}
 
