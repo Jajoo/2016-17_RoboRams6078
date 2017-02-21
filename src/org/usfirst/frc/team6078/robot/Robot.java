@@ -66,18 +66,18 @@ public class Robot extends IterativeRobot {
 		//Delete "ExampleCommand" and make sure everything still works, then commit the deletions
 		chooser.addDefault("Default Auto", new ExampleCommand());
 		chooser.addDefault("TestAuton", new MoverCommand());
-		SmartDashboard.putData("Auto mode", chooser);
+		//SmartDashboard.putData("Auto mode", chooser);
 		
+				
 		//Enables Camera 0 on SmartDashboard
 		UsbCamera Cam0 = new UsbCamera ("Cam0", 0);
 		CameraServer.getInstance().startAutomaticCapture(Cam0);
         Cam0.setResolution(1080, 720);
-
-		
+      		
 		//Enables a second (Camera 1) on SmartDashboard
-		UsbCamera Cam1 = new UsbCamera ("Cam1", 1);
-		CameraServer.getInstance().startAutomaticCapture(Cam1);
-        //Cam1.setResolution(240, 240);
+		//UsbCamera Cam1 = new UsbCamera ("Cam1", 0);
+		//CameraServer.getInstance().startAutomaticCapture(Cam1);
+        //Cam1.setResolution(1080, 720);
 	
 	}
 
@@ -163,6 +163,8 @@ public class Robot extends IterativeRobot {
 			//Same arcadeDrive, just allows raw Y and X input, hopefully allows us to slow down robot
 			
 			Drivetrain.turboButton();
+			
+			Drivetrain.servoButton();
 			
 			Drivetrain.drivetrainV1.drive.arcadeDrive(OI.operatorJoystick.getY() / Constants.handicap, OI.operatorJoystick.getX() / Constants.handicap);
 			

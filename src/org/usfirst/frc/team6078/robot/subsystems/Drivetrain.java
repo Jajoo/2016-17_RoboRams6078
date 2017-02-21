@@ -79,15 +79,30 @@ public class Drivetrain {
 		
 	}
 	
+	public static void switchDirection() {
+		
+		boolean buttonValue3;
+		
+		buttonValue3 = OI.operatorJoystick.getRawButton(2);
+		
+		while (buttonValue3 == true) {
+			
+			Constants.handicap = 1.4;
+			
+		}
+	
+		
+	}
+	
 	public static void servoButton() {
 		
-		boolean buttonValue2;	
+		boolean buttonValue2;
 		
 		buttonValue2 = OI.operatorJoystick.getRawButton(4);
 		
 		if (buttonValue2 == true) {
 		
-			Servo CameraServo = new Servo(9);
+			Servo CameraServo = new Servo(4);
 			
 			CameraServo.set(1.0);
 			
