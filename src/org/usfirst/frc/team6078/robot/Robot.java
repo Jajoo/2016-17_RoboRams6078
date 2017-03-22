@@ -68,17 +68,16 @@ public class Robot extends IterativeRobot {
 		chooser.addDefault("TestAuton", new MoverCommand());
 		//SmartDashboard.putData("Auto mode", chooser);
 		
-				
+      		
 		//Enables Camera 0 on SmartDashboard
-		UsbCamera Cam0 = new UsbCamera ("Cam0", 0);
+		UsbCamera Cam0 = new UsbCamera ("Cam0" , 0);
 		CameraServer.getInstance().startAutomaticCapture(Cam0);
         Cam0.setResolution(1080, 720);
-      		
-		//Enables a second (Camera 1) on SmartDashboard
-		//UsbCamera Cam1 = new UsbCamera ("Cam1", 0);
-		//CameraServer.getInstance().startAutomaticCapture(Cam1);
+		        
+        //Enables another Camera lets see if this works
+        //UsbCamera Cam1 = new UsbCamera ("Cam1", 0);
+        //CameraServer.getInstance().startAutomaticCapture(Cam1);
         //Cam1.setResolution(1080, 720);
-	
 	}
 
 	
@@ -133,7 +132,7 @@ public class Robot extends IterativeRobot {
 	public void autonomousPeriodic() {
 		Scheduler.getInstance().run();
 		
-		//Drivetrain.alernateDrive(1);
+		Drivetrain.alernateDrive(1);
 		
 	}
 
@@ -144,8 +143,8 @@ public class Robot extends IterativeRobot {
 		// continue until interrupted by another command, remove
 		// this line or comment it out.
 		if (autonomousCommand != null)
-			autonomousCommand.cancel();		
-
+			autonomousCommand.cancel();
+	
 	}
 
 	/**
@@ -157,13 +156,14 @@ public class Robot extends IterativeRobot {
 		 
 		while(isOperatorControl() && isEnabled()){
 			
-			//Servo
-			//Drivetrain.servoButton();
+			
 			
 			//Same arcadeDrive, just allows raw Y and X input, hopefully allows us to slow down robot
 			
+			//Drive Switch
 			Drivetrain.turboButton();
 			
+			//Servo
 			Drivetrain.servoButton();
 			
 			Drivetrain.drivetrainV1.drive.arcadeDrive(OI.operatorJoystick.getY() / Constants.handicap, OI.operatorJoystick.getX() / Constants.handicap);
@@ -176,8 +176,9 @@ public class Robot extends IterativeRobot {
 			}
 			
 		}
-			
+		
 	}
+			
 		
 
 	//}
