@@ -113,7 +113,7 @@ public class Robot extends IterativeRobot {
 	 */
 	@Override
 	public void autonomousInit() {
-		autonomousCommand = chooser.getSelected();
+		//autonomousCommand = chooser.getSelected();
 
 		/*
 		 * String autoSelected = SmartDashboard.getString("Auto Selector",
@@ -133,7 +133,7 @@ public class Robot extends IterativeRobot {
 	 */
 	@Override
 	public void autonomousPeriodic() {
-		Scheduler.getInstance().run();
+		//Scheduler.getInstance().run();
 		
 		Drivetrain.alernateDrive(1);
 		
@@ -155,9 +155,11 @@ public class Robot extends IterativeRobot {
 			e.printStackTrace();
 		}
 		
+		
+		
 		RobotMap.frontLeftMotor.set(0);
 		
-		
+	
 	}
 
 	@Override
