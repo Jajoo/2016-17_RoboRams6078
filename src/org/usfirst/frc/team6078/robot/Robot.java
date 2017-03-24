@@ -29,6 +29,9 @@ import edu.wpi.cscore.MjpegServer;
 import edu.wpi.cscore.UsbCamera;
 import edu.wpi.cscore.VideoMode.PixelFormat;
 import edu.wpi.first.wpilibj.CameraServer;
+
+import java.util.concurrent.TimeUnit;
+
 import org.opencv.core.Core;
 import org.opencv.core.CvType;
 import org.opencv.core.Mat;
@@ -133,6 +136,27 @@ public class Robot extends IterativeRobot {
 		Scheduler.getInstance().run();
 		
 		Drivetrain.alernateDrive(1);
+		
+		try {
+			TimeUnit.SECONDS.sleep(1);
+		} catch (InterruptedException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+		
+		Drivetrain.alernateDrive(0);
+		
+		RobotMap.frontLeftMotor.set(.5);
+		
+		try {
+			TimeUnit.SECONDS.sleep(1);
+		} catch (InterruptedException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+		
+		RobotMap.frontLeftMotor.set(0);
+		
 		
 	}
 
